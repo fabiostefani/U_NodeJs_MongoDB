@@ -3,7 +3,3 @@ module.exports = function(app) {
         res.render("home/index")
     });
 }
-
-
-
-Evelyny171682
