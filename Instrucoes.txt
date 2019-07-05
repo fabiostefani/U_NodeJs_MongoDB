@@ -1,0 +1,21 @@
+. Instalar a view engine no Node para renderizar o HTML
+    npm install ejs --save
+    Após é só na Config do servidor fazer o Node reconhecer essa engine de renderização e apontar o caminho das views
+        app.set('view engine', 'ejs');
+        app.set('views', './app/views');
+
+. Utilizar o MySQL no Node
+    npm install mysql --save
+
+. Consign
+    incluir de forma automática as rotas das view engines para as telas
+        npm install consign --save
+    Após só carregar as rotas de views para dentro dele
+    consign().include('routes').into(app); no server js
+
+    O Consign tbm consegue carregar o arquivo de configuração de conexão com o banco. Aonde é utilizado ele, não é mais necessário ficar fazendo require.
+    Ele fica disponivel no App, você pode passar por parâmetro ou require no App.
+    Tem que mudar um pouquinho a ideia da conexão, pois não deve ser iniciado uma conexão com o banco e sim retornado uma função de conexão para 
+    ser executada quando necessário.
+
+. 
